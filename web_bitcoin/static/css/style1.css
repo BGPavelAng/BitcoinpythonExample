@@ -1,0 +1,85 @@
+*{
+ margin:0px;
+ padding:0px;
+ height:100%;
+}
+
+.cont {
+ position:relative;
+ display: -webkit-box;
+ display: flex;
+ -webkit-box-align: center;
+ align-items: center;
+ -webkit-box-pack: center;
+ justify-content: center;
+ min-height: 100vh;
+ background-color: #ededed;
+ background-image: radial-gradient(ellipse farthest-corner at 45px 45px , #00FFFF 0%, rgba(0, 0, 255, 0) 50%, #0000FF 95%);
+
+}
+
+.carga{
+
+ max-width: 15rem;
+ width: 100%;
+ height: auto;
+ stroke-linecap: round;
+
+}
+
+.desc{
+
+ position:absolute;
+ top:49%;
+ left:10px;
+ right:0;
+ margin: 0 auto;
+ width: 100px;
+ height: 100px;
+}
+
+
+
+circle{
+
+ fill:none;
+ 
+ -webkit-animation-name: precarga;
+ -webkit-animation-duration: 3s;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-timing-function: ease-in-out;
+ -webkit-transform-origin: 170px 170px;
+ will-change: transform;
+
+}
+
+circle:nth-of-type(1){
+
+  stroke-dasharray:550;
+  -webkit-animation-delay: -1.5s;
+}
+
+circle:nth-of-type(2){
+
+  stroke-dasharray:500;
+  -webkit-animation-delay: -0.3s;
+}
+
+circle:nth-of-type(3){
+
+  stroke-dasharray:450;
+  -webkit-animation-delay: -2.45s;
+}
+
+circle:nth-of-type(4){
+
+  stroke-dasharray:300;
+  -webkit-animation-delay: -0.6s;
+}
+
+@-webkit-keyframes precarga{
+
+ 50%{-webkit-transform:rotate(360deg);}
+
+}
+

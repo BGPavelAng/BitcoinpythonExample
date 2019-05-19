@@ -1,0 +1,125 @@
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+
+
+.login-caja{
+ width:100%;
+ margin:auto;
+ max-width:525px;
+ min-height:770px;
+ position:relative;
+ background:url(/static/vendor/img/back.jpg) no-repeat center;
+ box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.login-opacidad{
+ width:100%;
+ height:100%;
+ position:absolute;
+ padding:90px 70px 50px 70px;
+ background:rgba(40, 57, 101,.85);
+}
+
+.login-opacidad .ini-sess,
+.login-opacidad .reg-sess{
+
+ top:0;
+ left:0;
+ right:0;
+ bottom:0;
+ position:absolute;
+ -webkit-transform:rotateY(180deg);
+         transform:rotateY(180deg);
+ -webkit-backface-visibility:hidden;
+         backface-visibility:hidden;
+ transition:all .4s linear;
+}
+
+.login-opacidad .ent,
+.login-opacidad .reg{
+
+ display:none;
+}
+
+.login-opacidad .tabl,
+.formulario-log .caja .label,
+.formulario-log .caja .button{
+ text-transform:uppercase;
+}
+
+.login-opacidad .tabl{
+
+ font-size:22px;
+ margin-right:15px;
+ padding-bottom:5px;
+ margin:0 15px 30px 0;
+ display:inline-block;
+ border-bottom:2px solid transparent;
+}
+
+.login-opacidad .ent:checked + .tabl,
+.login-opacidad .reg:checked + .tabl{
+ 
+ color:#fff;
+ border-color:#1161ee;
+}
+
+.formulario-log{
+ 
+ min-height:345px;
+ position:relative;
+ -webkit-perspective:1000px;
+         perspective:1000px;
+ -webkit-transform-style:preserve-3d;
+         transform-style:preserve-3d;
+}
+
+.formulario-log .caja{
+
+ margin-bottom:15px;
+}
+
+.formulario-log .caja .label,
+.formulario-log .caja .input,
+.formulario-log .caja .button{
+
+ width:100%;
+ color:#fff;
+ display:block;
+}
+
+.formulario-log .caja .input,
+.formulario-log .caja .button{
+
+ border:none;
+ padding: 15px 20px;
+ border-radius: 25px;
+ background: rgba(255,255,255,.1);
+}
+
+.formulario-log .caja input[data-type="password"]{
+
+ text-security:circle;
+ -webkit-text-security:circle;
+}
+
+.formulario-log .caja .label{
+ color:#aaa;
+ font-size:12px;
+}
+
+.formulario-log .caja .button{
+ background:#1161ee;
+}
+
+.login-opacidad .ent:checked + .tabl + .reg + .tabl + .formulario-log .ini-sess{
+
+ -webkit-transform:rotate(0);
+         transform:rotate(0);
+}
+
+.login-opacidad .reg:checked + .tabl + .formulario-log .reg-sess{
+ -webkit-transform:rotate(0);
+         transform:rotate(0);
+}

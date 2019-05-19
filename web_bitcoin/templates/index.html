@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head>
+
+<link rel="stylesheet" type="text/css" href="/static/css/style1.css">
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
+
+<script src="/static/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+</head>
+
+
+<body>
+
+<div class="cont" id="conte">
+
+
+	
+	<svg class="carga" viewBox="0 0 340 340">
+		 <circle cx="170" cy="170" r="160" stroke="#0000FF" stroke-width="15"/>
+		 <circle cx="170" cy="170" r="135" stroke="#7647a2" stroke-width="10"/>
+		 <circle cx="170" cy="170" r="110" stroke="#0000FF" stroke-width="5"/>
+		 <circle cx="170" cy="170" r="85" stroke="#7647a2" stroke-width="3"/>
+        </svg>
+<div class="desc" id="loads">
+Cargando...
+</div>
+
+</div>
+
+
+  <script>
+     $(window).on('load',setTimeout(function(){      
+           document.getElementById("loads").style.display = "none"
+           document.getElementById("conte").remove();
+           window.open("Login","_self");
+    }, 7500));
+        
+
+    </script>
+
+
+
+</body>

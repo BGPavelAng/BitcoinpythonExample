@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/css/style2.css" type="text/css">
+
+</head>
+
+<body>
+
+<div class="login-caja">
+  <div class="login-opacidad">
+     <input id="pestana1" type="radio" name="tabl" class="ent" checked>
+       <label for="pestana1" class="tabl">Entrar</label>
+     <input id="pestana2" type="radio" name="tabl" class="reg">
+       <label for="pestana2" class="tabl">Registro</label>
+	    <div class="formulario-log">
+        <form action = "{{url_for('reg_new_user')}}" method = "GET">
+               <div class="ini-sess">
+                   <div class="caja">
+                        <label for="usuario" class="label">Usuario</label>
+			<input id="usuario" type="text" class="input" name="nm">
+                   </div>
+		   <div class="caja">
+			<label for="passw" class="label">Contraseña</label>
+			<input id="passw" type="password" class="input" data-type="password" name="ps">
+                   </div>
+		   <div class="caja">
+			<input type="submit" class="button" value="Entrar">
+                   </div></form>
+                      
+                </div> <form action = "{{url_for('reg_new_user')}}" method = "POST">
+                       <div class="reg-sess">
+                         <div class="caja">
+                           <label for="user" class="label">Usuario</label>
+                           <input id="usuario-r" type="text" class="input" name="nm"/>
+                         </div>  
+                         <div class="caja">
+                           <label for="passw-r" class="label">Contraseña</label>
+                           <input id="passw-r" type="text" class="input" name="ps"/>
+                         </div>
+                         <div class="caja">
+                           <label for="passw-rp" class="label">Repetir contraseña</label>
+                           <input id="passw-rp" type="text" class="input">
+                         </div>
+                         <div class="caja">
+                           <label for="mail-rp" class="label">Correo para recuperar contraseña</label>
+                           <input id="mail-rp" type="text" class="input" name="eml"/>
+                         </div> 
+			 <div class="caja">
+			    <input type="submit" class="button" value="Registro">
+ 		        </div>
+                     </form>
+              </div>
+            </div>
+	 
+  </div>
+</div>
+</body>
+</html>
